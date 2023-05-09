@@ -1,0 +1,44 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <i class="fa-solid fa-store fa-2x"></i>
+  </div>
+  <div class="navbar-title">shop</div>
+  <div class="navbar-cart" (click)="onToggleCart()">
+    <div class="navbar-cart-items">
+      <p>0</p>
+    </div>
+    <i class="fa-solid fa-store"></i>
+  </div>
+</nav>
+<div class="cart" [ngClass]="{show:viewCart}">
+  <app-carrito class="app-carrito">
+
+  </app-carrito>
+</div>
+
+
+<div class="container">
+  <div class="container-title">
+    <h2>Shop con Angular</h2>
+  </div>
+  <div class="container-products">
+
+    <article class="producto" *ngFor="let product of products">
+      <div class="product-header">
+        <h3 class="product-header-title">
+          {{product.title}}
+        </h3>
+        <p>$ {{product.price}} </p>
+      </div>
+      <div class="product-body">
+        <p>{{product.description}}</p>
+      </div>
+      <div class="product-footer">
+        <button class="product-footer-button" (click)="addToCart(product)">
+          <i class="fa-solid fa-cart-plus"></i>
+        </button>
+      </div>
+    </article>
+
+  </div>
+</div>

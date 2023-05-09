@@ -31,6 +31,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     RegistroComponent,
     HomeComponent,
     CarritoComponent,
+    ProductoComponent,
 
   ],
   imports: [
@@ -60,9 +62,9 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     MatButtonModule,
     MatPaginatorModule,
     GoogleMapsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideAuth(() => getAuth()),
+    // provideFirestore(() => getFirestore())
 
   ],
   exports: [
