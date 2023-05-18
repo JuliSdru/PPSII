@@ -26,6 +26,7 @@ export class RegistroComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.formReg.value);
     this.userService.register(this.formReg.value)
       .then(response => {
         console.log(response);

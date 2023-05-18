@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Producto from 'src/app/interfaces/producto.interfaces';
+//import Producto from 'src/app/interfaces/iproducto.interfaces';
 import { CarritoService } from 'src/app/services/carrito.service';
 
 @Component({
@@ -9,16 +9,16 @@ import { CarritoService } from 'src/app/services/carrito.service';
 })
 export class ProductoComponent implements OnInit {
 
-  viewCart:boolean=false;
+ /* viewCart:boolean=false;
   products:Producto[]=[];
-
+*/
   constructor(private carritoService:CarritoService) { }
 
   ngOnInit(): void {
-    this.getProducts();
+   // this.getProducts();
   }
 
-  getProducts(){
+ /* getProducts(){
   this.carritoService.getAllProducts().subscribe((data)=>{
     this.products = data;
     console.log(this.products);
@@ -31,5 +31,5 @@ export class ProductoComponent implements OnInit {
   onToggleCart(){
     this.viewCart = !this.viewCart;
   }
-
+*/
 }

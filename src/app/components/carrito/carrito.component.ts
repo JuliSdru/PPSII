@@ -8,13 +8,13 @@ import { CarritoService } from 'src/app/services/carrito.service';
 })
 export class CarritoComponent implements OnInit {
 
-  myCart$ = this.carritoService.myCart$;
+ /* myCart$ = this.carritoService.myCart$;*/
   constructor(private carritoService:CarritoService) { }
 
   ngOnInit(): void {
   }
 
-  totalProduct(price:number, units:number){
+ /* totalProduct(price:number, units:number){
     return price * units;
   }
 
@@ -40,6 +40,6 @@ export class CarritoComponent implements OnInit {
   totalCarrito(){
     const result = this.carritoService.totalCarrito();
     return result;
-  }
+  }*/
 
 }

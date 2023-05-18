@@ -39,6 +39,7 @@
 <body>
 
     <div class="login-card-container">
+        <button value="inicio" [routerLink]="['/main']">Volver a Inicio</button>
         <div class="login-card">
             <div class="login-card-logo">
                 <img src="../../../assets/img/logo.png" alt="logo">
@@ -64,7 +65,7 @@
                 <div class="form-item-other">
                     <!-- <a href="#">I forgot my password!</a> -->
                 </div>
-                <button type="submit" value="Enviar" [routerLink]="['/carrito']">Iniciar Sesión</button>
+                <button type="submit" value="Enviar" >Iniciar Sesión</button>
             </form>
             <div class="login-card-footer">
                 Todavía no tenes una cuenta? <a [routerLink]="['/registro']">Registrate.</a>

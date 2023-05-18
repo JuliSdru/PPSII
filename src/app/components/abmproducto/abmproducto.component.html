@@ -1,0 +1,51 @@
+
+<div class="login-card-container">
+    <button value="inicio" [routerLink]="['/main']">Volver a Inicio</button>
+    <div class="login-card">
+        <div class="login-card-logo">
+            <img src="../../../assets/img/logo.png" alt="logo">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="login-card-header">
+            <h1>Crear nuevo producto</h1>
+            
+        </div>
+        <form class="login-card-form" [formGroup]="formProduct" (ngSubmit)="onSubmit()">
+            <div class="form-item">
+                <input type="text" placeholder="Nombre" id="nameForm" formControlName="name" style="text-align: center;"
+                autofocus required>
+            </div>
+            <div class="form-item">
+                <input type="text" placeholder="Precio por unidad" id="precioForm" formControlName="precio" style="text-align: center;"
+                autofocus required>
+            </div>
+            <div class="form-item">
+                <input type="text" placeholder="Stock disponible" id="StockForm" formControlName="stock" style="text-align: center;"
+                autofocus required>
+            </div>
+            <div class="form-item">
+                <input type="text" placeholder="Stock Minimo para reposicion" id="minStockForm" formControlName="minStock" style="text-align: center;"
+                autofocus required>
+            </div>
+
+            <div class="form-item">
+                <select formControlName="category">
+                    <option>Selecciona la categoria</option>
+                    <option *ngFor="let suit of category">{{suit}}</option>
+                  </select>
+            </div>
+            <!--div class="form-item">
+                <input type="file" placeholder="Subir imagen" id="precioForm" formControlName="precio" (change)="uploadImagen($event)" style="text-align: center;"
+                autofocus required>
+            </div-->
+            <button type="submit" value="Enviar" >Agregar Producto</button>
+        </form>
+        <button [routerLink]="['/listProducto']" >ver lista de productos</button>
+    </div>
+  
+
+</div>

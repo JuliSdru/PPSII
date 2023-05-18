@@ -32,6 +32,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { ABMProductoComponent } from './components/abmproducto/abmproducto.component';
+import { ListProductUserComponent } from './components/list-product-user/list-product-user.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { ProductoComponent } from './components/producto/producto.component';
     HomeComponent,
     CarritoComponent,
     ProductoComponent,
+    ABMProductoComponent,
+    ListProductUserComponent,
 
   ],
   imports: [
@@ -62,9 +66,9 @@ import { ProductoComponent } from './components/producto/producto.component';
     MatButtonModule,
     MatPaginatorModule,
     GoogleMapsModule,
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    // provideAuth(() => getAuth()),
-    // provideFirestore(() => getFirestore())
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
 
   ],
   exports: [
