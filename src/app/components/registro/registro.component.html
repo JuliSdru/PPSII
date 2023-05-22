@@ -8,12 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="registro.component.css"/>
-    <title>Login Page</title>
+
 </head>
 
 <body>
 
     <div class="login-card-container">
+        <button value="inicio" [routerLink]="['/main']">Volver a Inicio</button>
         <div class="login-card">
             <div class="login-card-logo">
                 <img src="../../../assets/img/logo.png" alt="logo">
@@ -38,7 +39,7 @@
                     <!-- <a href="#">I forgot my password!</a> -->
 
                 </div>
-                <button type="submit" value="Enviar" [routerLink]="['/login']">Registrate</button>
+                <button type="submit" value="Enviar" >Registrate</button>
             </form>
             <div class="login-card-footer">
               Ya tenes una cuenta? <a [routerLink]="['/login']">Inicia Sesion</a>

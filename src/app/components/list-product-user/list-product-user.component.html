@@ -1,0 +1,36 @@
+<button value="inicio" [routerLink]="['/producto']">agregar producto</button>
+<button value="inicio" [routerLink]="['/main']">Volver a Inicio</button>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th scope="col" *ngFor="let titulo of titulosColumnas">
+                {{titulo}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fila of listProduct">
+            <th>
+                {{fila.name}}
+            </th>
+            <th>
+                {{fila.precio}}
+            </th>
+            <th>
+                {{fila.stock}}
+            </th>
+            <th>
+                {{fila.minStock}}
+            </th>
+            <th>
+                {{fila.category}}
+            </th>
+            <th>
+                <button (onclick)="modificar(fila)">modificar</button>
+                <button (click)="eliminar(fila)">eliminar</button>
+            </th>
+            
+        </tr>
+    </tbody>
+</table>
+

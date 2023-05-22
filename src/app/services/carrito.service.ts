@@ -1,4 +1,4 @@
-import  Producto  from 'src/app/interfaces/producto.interfaces';
+//import  Producto  from 'src/app/interfaces/iproducto.interfaces';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, lastValueFrom } from 'rxjs';
@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable, lastValueFrom } from 'rxjs';
   providedIn: 'root'
 })
 export class CarritoService {
-
+/*
   baseUrl = 'https://api.escuelajs.co/api/v1/';
   //lista carrito
   private myList: Producto[] = [];
@@ -15,10 +15,10 @@ export class CarritoService {
   private myCart = new BehaviorSubject<Producto[]>([])
   myCart$ = this.myCart.asObservable();
 
-
+*/
   constructor(private httpClient: HttpClient) { }
 
-  getAllProducts(): Observable<Producto[]> {
+ /* getAllProducts(): Observable<Producto[]> {
     const response = this.httpClient.get<Producto[]>(`${this.baseUrl}products`)
     return response;
   }
@@ -72,5 +72,5 @@ export class CarritoService {
   // getPromise(): Promise<any[]>
   // {
   //   return lastValueFrom(this.httpClient.get<any[]>(`${this.baseUrl}products`))
-  // }
+  // }*/
 }

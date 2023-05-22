@@ -7,10 +7,13 @@ import { HomeComponent } from './components/home/home.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ABMProductoComponent } from './components/abmproducto/abmproducto.component';
+import { ListProductUserComponent } from './components/list-product-user/list-product-user.component';
 
 const routes: Routes = [
+  {path:'',pathMatch:'full',redirectTo:'main'},
   {
-    path: '', component: HomeComponent
+    path: 'main', component: HomeComponent
   },
   {
     path: 'login', component: LoginComponent
@@ -21,9 +24,11 @@ const routes: Routes = [
   {
     path: 'carrito', component: CarritoComponent
   },
-  {
-    path: 'producto', component: ProductoComponent  }
+    {
+      path: 'producto', component: ABMProductoComponent  },
 
+{
+      path: 'listProducto', component: ListProductUserComponent  }
 
 ]
 
