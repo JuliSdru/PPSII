@@ -17,6 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatMenuModule} from'@angular/material/menu';
 import { MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -34,6 +35,11 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ABMProductoComponent } from './components/abmproducto/abmproducto.component';
 import { ListProductUserComponent } from './components/list-product-user/list-product-user.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CanAdminGuard } from './guards/canAdmin.guard';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { AbmEmpleadoComponent } from './components/abm-empleado/abm-empleado.component';
+import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 
 
 @NgModule({
@@ -46,9 +52,14 @@ import { ListProductUserComponent } from './components/list-product-user/list-pr
     ProductoComponent,
     ABMProductoComponent,
     ListProductUserComponent,
+    HeaderComponent,
+    ContactoComponent,
+    AbmEmpleadoComponent,
+    ListEmpleadoComponent,
 
   ],
   imports: [
+    MatMenuModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -75,7 +86,7 @@ import { ListProductUserComponent } from './components/list-product-user/list-pr
     MatButtonModule,
     MatFormFieldModule,
     MatCardModule],
-  providers: [],
+  providers: [CanAdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

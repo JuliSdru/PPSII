@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="menu container">
+        <a class="logo">
+          <img class="beuatelogo" [routerLink]="['/main']" src="../../../assets/img/logov2.png" alt="menu">
+        </a>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+          <img class="menu-icono" src="../../../assets/img/barra-de-menus.png" alt="menu">
+        </label>
+        
+        <nav class="navbar">
+          <button  (click)="adminF(true)">Admin</button>
+          <button  (click)="adminF(false)">clientes</button>
+          <ul *ngIf="!admin; else administrador">
+            
+           
+            <li><a href="main">Inicio</a></li>
+            <li><a href="productoUser">Productos</a></li>
+            <li><a href="">Pedidos</a></li>
+            <li><a href="contacto">Contacto</a></li>
+
+            <li><a>
+              <img class="icono" [routerLink]="['/carrito']" src="../../../assets/img/carrito-de-compras (1).png">
+            </a></li>
+          <li><a [routerLink]="['/login']">
+              <img class="icono"  src="../../../assets/img/acceso.png">
+            </a></li>
+  
+        </ul>
+            <ng-template #administrador>
+              <ul>
+           
+                <li>
+                <button mat-button [matMenuTriggerFor]="producto">Productos</button>
+                <mat-menu #producto="matMenu">
+                <button mat-menu-item [routerLink]="['producto']">Agregar producto</button>
+                <button mat-menu-item  [routerLink]="['listProducto']">Lista de Productos</button>
+                </mat-menu>
+              </li>
+
+              <li>
+                <button mat-button [matMenuTriggerFor]="pedido">Pedidos</button>
+                <mat-menu #pedido="matMenu">
+                <button mat-menu-item  [routerLink]="['']">Lista de Productos</button>
+                </mat-menu>
+              </li>
+              <li>
+                <button mat-button [matMenuTriggerFor]="empleado">Empleados</button>
+                <mat-menu #empleado="matMenu">
+                <button mat-menu-item [routerLink]="['empleado']">Agregar Empleado</button>
+                <button mat-menu-item  [routerLink]="['listEmpleado']">Lista de Empleados</button>
+                </mat-menu>
+              </li>
+                <li><a href="main">Pagina Principal</a></li>
+            </ul>
+            </ng-template>
+            <!--ul class="navbar-nav mx-auto" *ngIf="_userP | async as user; else login">
+              <li class="nav-item" *ngIf="user">
+                <a href="#" class="nav-link" (click)="onLogout()">Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"> {{ user?.email }}</a>
+              </li>
+            </ul>
+            <ng-template #login>
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/register">Register</a>
+                </li>
+              </ul>
+            </ng-template-->
+           
+        </nav>
+      </div>
+      <br>
+      <br>
+    
+</body>
+</html>
+   

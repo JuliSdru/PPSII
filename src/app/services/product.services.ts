@@ -28,6 +28,12 @@ export class ProductService {
       const docProduct= doc(this.firestore,`Productos/${p.id}`);
       return deleteDoc(docProduct);
     }
+
+    editProduct(p:IProducto){
+      console.log(p);
+      const docProduct= doc(this.firestore,`Productos/${p.id}`);
+      return deleteDoc(docProduct);
+    }
 }
 
        
